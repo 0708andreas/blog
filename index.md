@@ -9,7 +9,7 @@ Velkommen til min blog. Her prøver jeg at skrive om ting, der interesserer mig,
 <ul>
   {% for post in site.posts %}
     <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h2><a href="https://0708andreas.github.io/blog{{ post.url }}">{{ post.title }}</a></h2>
       {{ post.excerpt }}
     </li>
   {% endfor %}
