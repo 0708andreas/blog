@@ -13,9 +13,13 @@ national museum has a search function to find pictures of all their artifacts, b
 metadata that human annotators have written. This metadata is often relatively sparse, for many reasons.
 But most images where simply labeled as "anter hammer" or similar, making it very difficult to search for
 artifacts with specific features. When I read about ImageBind it struck me, that the embedding of an image
-probably contains for information than that, which we can search for using text.
+probably contains more information than that, which we can search for using text.
 
 # How
+ImageBind takes a piece of text, an image, a sound or a video, and creates a 1024-dimensional vector out of it. This is similar to classical word embedding models, which has been used for a while now. The idea is, that similar objects should end up having vectors that are close to each other. Thus, to find a certain image, we just need a piece of text that describes it. This text should embed to a vector close to the desired image.
+
+We need two components to make this work: the embedding model and a way to find vectors, that a similar to a given query vector. The embedding model has already been covered, we'll use ImageBind. To find similary vector, we'll use ChromaDB. The reason for this is that it is easy to set up and is supposed to scale pretty well, whould that be needed.
+
 I whipped up the following command line tool:
 
 ```python
