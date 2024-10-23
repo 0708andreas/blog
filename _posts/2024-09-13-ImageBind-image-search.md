@@ -11,7 +11,7 @@ This enables us to compare vectors across different modalities.
 I ran into a problem when searching for images of a particular kind of stone age antler artifact. The danish 
 national museum has a search function to find pictures of all their artifacts, but you're searching in the
 metadata that human annotators have written. This metadata is often relatively sparse, for many reasons.
-But most images where simply labeled as "anter hammer" or similar, making it very difficult to search for
+But most images where simply labeled as "antler hammer" or similar, making it very difficult to search for
 artifacts with specific features. When I read about ImageBind it struck me, that the embedding of an image
 probably contains more information than that, which we can search for using text.
 
