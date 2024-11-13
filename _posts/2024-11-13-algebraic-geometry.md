@@ -18,5 +18,20 @@ We can add more variables. $f(x, y) = x^2 + y^2$ is a multivariate polynomial fu
 
 Generally speaking, if we have two polynomial functions $f(x, y)$ and $g(x, y)$, then $f(x, y) + g(x, y)$ and $f(x, y) \cdot g(x, y)$ are also polynomial functions. We can add and multiply polynomial functions and we still get polynomial functions. This enables us to describe a wide variety of computations using polynomials.
 
+In Julia, multivariate plynomials are provided by the Nemo package:
+```julia
+julia> using Nemo
+julia> R, (x, y) = QQ[:x, :y] # Define the variable we'll be using
+julia> (x - 1)^2 + (y - 2)^2 # expand the polynomial from above
+x^2 - 2*x + y^2 - 4*y + 5
+julia> f = (x - 1)^2 + (y - 2)^2
+julia> f(2, 3) # we can also evaluate polynomials from Julia
+2
+julia> evaluate((x - 1)^2 + (y - 2)^2, [2, 3]) # or evaluation can happen via the evaluate function
+2
+```
+
+
+
 ## The link between polynomials and geometry
 
