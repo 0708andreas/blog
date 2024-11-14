@@ -31,7 +31,7 @@ julia> evaluate((x - 1)^2 + (y - 2)^2, [2, 3]) # or evaluation can happen via th
 2
 ```
 
-
+There is one
 
 ## The link between polynomials and geometry
 
