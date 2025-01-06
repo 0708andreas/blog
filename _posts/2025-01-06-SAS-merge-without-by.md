@@ -8,7 +8,7 @@ specifically that you can omit the `by` statement, which leads to wildly unexpec
 can set the 
 
 ```
-options mergenoby=error;
+OPTIONS MERGENOBY=ERROR;
 ```
 
 to get SAS to report an error if the `by` statement is missing. I'm going to include that option in every SAS-script I write from now on.
@@ -77,7 +77,7 @@ the `i`'th row of the first table with the contents of the `i`'th row of the the
 Since this is never what I want to in my work (at least to far), I can tell SAS to make a `merge` without a `by` an error:
 
 ```
-options mergenoby=error;
+OPTIONS MERGENOBY=ERROR;
 ```
 
 Simply place this at the top of your SAS file, and this particular footgun will never shoot you again. Until you forget to add it.
